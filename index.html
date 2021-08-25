@@ -11,7 +11,7 @@
     <script>
         var swfobject = {};
 
-        swfobject.embedSWF = function (url, cont, width, height) {
+        swfobject.embedSWF = function (url, cont) {
             var ruffle = window.RufflePlayer.newest(),
                 player = Object.assign(document.getElementById(cont).appendChild(ruffle.createPlayer()), {
                     style: 'width: 100%; height: 100%',
@@ -20,7 +20,7 @@
             player.load({ url: url });
         }
 
-        swfobject.embedSWF('spacealert.swf', 'ruffle', 800, 600);
+        swfobject.embedSWF('spacealert.swf', 'ruffle');
     </script>
 </body>
 
